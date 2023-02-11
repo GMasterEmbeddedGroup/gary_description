@@ -10,7 +10,7 @@
 
         <joint name="chassis_left_front">
             <param name="motor_id">2</param>
-            <param name="motor_type">m2006</param>
+            <param name="motor_type">m3508</param>
         </joint>
 
         <joint name="chassis_left_back">
