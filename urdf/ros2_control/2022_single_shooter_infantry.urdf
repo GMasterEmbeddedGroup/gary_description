@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="2022_single_shooter_infantry" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <ros2_control name="can1_motors1" type="system">
+    <ros2_control name="chassis_motors" type="system">
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
             <param name="can_bus">can3-2-3</param>
@@ -30,7 +30,7 @@
 
     </ros2_control>
 
-    <ros2_control name="can1_motors_2" type="system">
+    <ros2_control name="gimbal_yaw" type="system">
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
@@ -58,7 +58,7 @@
 
     </ros2_control>
 
-    <ros2_control name="can2_motors1" type="system">
+    <ros2_control name="gimbal_motors" type="system">
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
@@ -78,7 +78,7 @@
 
     </ros2_control>
 
-    <ros2_control name="can2_motors2" type="system">
+    <ros2_control name="fric_motors" type="system">
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
