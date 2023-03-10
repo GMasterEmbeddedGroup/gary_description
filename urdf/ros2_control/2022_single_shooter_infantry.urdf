@@ -4,7 +4,7 @@
     <ros2_control name="chassis_motors" type="system">
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can3-2-3</param>
+            <param name="can_bus">can-chassis</param>
             <param name="cmd_id">0x200</param>
         </hardware>
 
@@ -34,7 +34,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can3-2-3</param>
+            <param name="can_bus">can-chassis</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
 
@@ -49,7 +49,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMIMUSensor</plugin>
-            <param name="can_bus">can3-2-4</param>
+            <param name="can_bus">can-gimbal</param>
             <param name="orientation_can_id">0x100</param>
             <param name="gyro_can_id">0x101</param>
             <param name="accel_can_id">0x102</param>
@@ -62,7 +62,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can3-2-4</param>
+            <param name="can_bus">can-gimbal</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
 
@@ -82,7 +82,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can3-2-4</param>
+            <param name="can_bus">can-gimbal</param>
             <param name="cmd_id">0x200</param>
         </hardware>
 
