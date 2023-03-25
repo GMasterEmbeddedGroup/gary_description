@@ -4,7 +4,7 @@
     <ros2_control name="chassis_motors" type="system">
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can1-8-1</param>
+            <param name="can_bus">can-chassis</param>
             <param name="cmd_id">0x200</param>
         </hardware>
 
@@ -34,7 +34,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can1-8-1</param>
+            <param name="can_bus">can-chassis</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
 
@@ -54,7 +54,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can1-8-2</param>
+            <param name="can_bus">can-liftup-1</param>
             <param name="cmd_id">0x200</param>
         </hardware>
 
@@ -79,7 +79,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can1-8-2</param>
+            <param name="can_bus">can-liftup-1</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
 
@@ -104,7 +104,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can1-8-3</param>
+            <param name="can_bus">can-liftup-2</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
 
@@ -129,7 +129,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can1-8-3</param>
+            <param name="can_bus">can-liftup-2</param>
             <param name="cmd_id">0x200</param>
         </hardware>
 
