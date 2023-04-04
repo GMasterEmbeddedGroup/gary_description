@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot name="2022_single_shooter_infantry" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="chassis_motors" type="system">
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can-chassis</param>
+            <param name="cmd_id">0x200</param>
+        </hardware>
+
+        <joint name="chassis_left_front">
+            <param name="motor_id">2</param>
+            <param name="motor_type">m3508</param>
+        </joint>
+
+        <joint name="chassis_left_back">
+            <param name="motor_id">3</param>
+            <param name="motor_type">m3508</param>
+        </joint>
+
+        <joint name="chassis_right_front">
+            <param name="motor_id">1</param>
+            <param name="motor_type">m3508</param>
+        </joint>
+
+        <joint name="chassis_right_back">
+            <param name="motor_id">4</param>
+            <param name="motor_type">m3508</param>
+        </joint>
+
+    </ros2_control>
+
+    <ros2_control name="gimbal_yaw" type="system">
+
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can-chassis</param>
+            <param name="cmd_id">0x1FF</param>
+        </hardware>
+
+        <joint name="gimbal_yaw">
+            <param name="motor_id">1</param>
+            <param name="motor_type">m6020</param>
+        </joint>
+
+    </ros2_control>
+
+    <ros2_control name="gimbal_imu" type="sensor">
+
+        <hardware>
+            <plugin>gary_hardware/RMIMUSensor</plugin>
+            <param name="can_bus">can-gimbal</param>
+            <param name="orientation_can_id">0x101</param>
+            <param name="gyro_can_id">0x102</param>
+            <param name="accel_can_id">0x103</param>
+            <param name="update_rate">250</param>
+        </hardware>
+
+    </ros2_control>
+
+    <ros2_control name="gimbal_motors" type="system">
+
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can-gimbal</param>
+            <param name="cmd_id">0x1FF</param>
+        </hardware>
+
+        <joint name="gimbal_pitch">
+            <param name="motor_id">2</param>
+            <param name="motor_type">m6020</param>
+        </joint>
+
+        <joint name="switch">
+            <param name="motor_id">5</param>
+            <param name="motor_type">m2006</param>
+        </joint>
+
+    </ros2_control>
+
+    <ros2_control name="fric_motors" type="system">
+
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can-gimbal</param>
+            <param name="cmd_id">0x200</param>
+        </hardware>
+
+        <joint name="fric_left">
+            <param name="motor_id">1</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+        <joint name="fric_right">
+            <param name="motor_id">2</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+        <joint name="trigger">
+            <param name="motor_id">3</param>
+            <param name="motor_type">m2006</param>
+        </joint>
+
+        <joint name="cover">
+            <param name="motor_id">4</param>
+            <param name="motor_type">m2006</param>
+        </joint>
+
+        </ros2_control>
+
+</robot>
