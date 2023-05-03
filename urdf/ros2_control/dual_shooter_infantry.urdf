@@ -30,6 +30,19 @@
 
     </ros2_control>
 
+    <ros2_control name="supercap" type="system">
+
+        <hardware>
+            <plugin>gary_hardware/RMSuperCAPSystem</plugin>
+            <param name="can_bus">can-chassis</param>
+            <param name="cmd_id">0x120</param>
+            <param name="fdb_id">0x121</param>
+            <param name="accel_can_id">0x103</param>
+            <param name="update_rate">250</param>
+        </hardware>
+
+    </ros2_control>
+
     <ros2_control name="gimbal_yaw" type="system">
 
         <hardware>
