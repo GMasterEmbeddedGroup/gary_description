@@ -49,10 +49,7 @@
         <hardware>
             <plugin>gary_hardware/RMIMUSensor</plugin>
             <param name="can_bus">can-gimbal</param>
-            <param name="orientation_can_id">0x101</param>
-            <param name="gyro_can_id">0x102</param>
-            <param name="accel_can_id">0x103</param>
-            <param name="corrected_angle_can_id">0x114</param>
+            <param name="imu_can_id">0x000</param>
             <param name="update_rate">250</param>
         </hardware>
 
