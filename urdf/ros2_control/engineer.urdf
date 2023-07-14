@@ -100,11 +100,6 @@
             <param name="motor_type">m2006</param>
         </joint>
 
-        <joint name="gimbal_arm">
-            <param name="motor_id">2</param>
-            <param name="motor_type">m3508</param>
-        </joint>
-
     </ros2_control>
 
     <ros2_control name="misc_motors" type="system">
@@ -113,6 +108,11 @@
             <param name="can_bus">can-gimbal</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
+
+        <joint name="gimbal_arm">
+            <param name="motor_id">2</param>
+            <param name="motor_type">m3508</param>
+        </joint>
 
         <joint name="gimbal_yaw">
             <param name="motor_id">2</param>
