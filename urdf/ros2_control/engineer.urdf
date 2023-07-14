@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot name="engineer" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+
     <ros2_control name="chassis_motors" type="system">
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
@@ -30,6 +31,7 @@
 
     </ros2_control>
 
+
     <ros2_control name="rescue_motors" type="system">
 
         <hardware>
@@ -50,20 +52,8 @@
 
     </ros2_control>
 
-    <ros2_control name="imu" type="sensor">
 
-        <hardware>
-            <plugin>gary_hardware/RMIMUSensor</plugin>
-            <param name="can_bus">can-chassis</param>
-            <param name="orientation_can_id">0x101</param>
-            <param name="gyro_can_id">0x102</param>
-            <param name="accel_can_id">0x103</param>
-            <param name="update_rate">250</param>
-        </hardware>
-
-    </ros2_control>
-
-    <ros2_control name="liftup_stretch_motors" type="system">
+    <ros2_control name="liftup_motors" type="system">
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
             <param name="can_bus">can-liftup</param>
@@ -80,36 +70,8 @@
             <param name="motor_type">m3508</param>
         </joint>
 
-        <joint name="stretch_left">
-            <param name="motor_id">3</param>
-            <param name="motor_type">m3508</param>
-        </joint>
-
-        <joint name="stretch_right">
-            <param name="motor_id">4</param>
-            <param name="motor_type">m3508</param>
-        </joint>
-
     </ros2_control>
 
-    <ros2_control name="spin_rotate_motors" type="system">
-        <hardware>
-            <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can-liftup</param>
-            <param name="cmd_id">0x1FF</param>
-        </hardware>
-
-        <joint name="sucker_spin">
-            <param name="motor_id">5</param>
-            <param name="motor_type">m3508</param>
-        </joint>
-
-        <joint name="ore_rotate">
-            <param name="motor_id">4</param>
-            <param name="motor_type">m6020</param>
-        </joint>
-
-    </ros2_control>
 
     <ros2_control name="gimbal_motors" type="system">
         <hardware>
@@ -124,8 +86,8 @@
         </joint>
 
         <joint name="gimbal_pitch">
-            <param name="motor_id">2</param>
-            <param name="motor_type">m3508</param>
+            <param name="motor_id">5</param>
+            <param name="motor_type">m2006</param>
         </joint>
 
         <joint name="gimbal_left">
@@ -138,19 +100,19 @@
             <param name="motor_type">m2006</param>
         </joint>
 
+        <joint name="gimbal_arm">
+            <param name="motor_id">2</param>
+            <param name="motor_type">m3508</param>
+        </joint>
+
     </ros2_control>
 
-    <ros2_control name="_motors" type="system">
+    <ros2_control name="misc_motors" type="system">
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
             <param name="can_bus">can-gimbal</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
-
-        <joint name="image_transmitter_rotate">
-            <param name="motor_id">5</param>
-            <param name="motor_type">m2006</param>
-        </joint>
 
         <joint name="gimbal_yaw">
             <param name="motor_id">2</param>
