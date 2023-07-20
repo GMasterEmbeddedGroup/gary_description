@@ -70,13 +70,22 @@
             <param name="motor_type">m3508</param>
         </joint>
 
+    </ros2_control>
+
+    <ros2_control name="stretch_motors" type="system">
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can-liftup</param>
+            <param name="cmd_id">0x1FF</param>
+        </hardware>
+
         <joint name="gimbal_left">
-            <param name="motor_id">3</param>
+            <param name="motor_id">5</param>
             <param name="motor_type">m2006</param>
         </joint>
 
         <joint name="gimbal_right">
-            <param name="motor_id">4</param>
+            <param name="motor_id">6</param>
             <param name="motor_type">m2006</param>
         </joint>
 
