@@ -44,7 +44,7 @@
             <param name="motor_type">m3508_gearless</param>
         </joint>
 
-        <joint name="fric_left_back">
+        <joint name="fric_left">
             <param name="motor_id">4</param>
             <param name="motor_type">m3508_gearless</param>
         </joint>
