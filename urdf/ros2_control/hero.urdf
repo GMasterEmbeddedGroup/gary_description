@@ -5,7 +5,7 @@
 
         <hardware>
             <plugin>gary_hardware/RMMotorSystem</plugin>
-            <param name="can_bus">can2</param>
+            <param name="can_bus">can-gimbal</param>
             <param name="cmd_id">0x1FF</param>
         </hardware>
 
