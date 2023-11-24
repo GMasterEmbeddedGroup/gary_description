@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot name="hero" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="fric_motors_major" type="system">
+
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can2</param>
+            <param name="cmd_id">0x1FF</param>
+        </hardware>
+
+        <joint name="trigger">
+            <param name="motor_id">6</param>
+            <param name="motor_type">m3508</param>
+        </joint>
+
+        <joint name="fric_right">
+            <param name="motor_id">5</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+    </ros2_control>
+
+    <ros2_control name="fric_motors_minor" type="system">
+
+        <hardware>
+            <plugin>gary_hardware/RMMotorSystem</plugin>
+            <param name="can_bus">can-gimbal</param>
+            <param name="cmd_id">0x200</param>
+        </hardware>
+
+        <joint name="sub_trigger">
+            <param name="motor_id">1</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+        <joint name="fric_left_back">
+            <param name="motor_id">2</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+        <joint name="fric_right_back">
+            <param name="motor_id">3</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+        <joint name="fric_left_back">
+            <param name="motor_id">4</param>
+            <param name="motor_type">m3508_gearless</param>
+        </joint>
+
+        </ros2_control>
+
+</robot>
